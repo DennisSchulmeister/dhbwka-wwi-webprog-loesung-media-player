@@ -18,11 +18,8 @@
 
         <script>
             window.addEventListener("load", async () => {
-                // ACHTUNG: Der AJAX-Aufruf funktioniert nur, wenn die Seite von einem Webserver
-                // geladen wird. Im Atom-Editor können Sie hierfür das Paket „local-web-server”
-                // installieren und dann im Menü unter „Packages → Local Web Server → Start” den
-                // Webserver starten.
-                let prefix = "../Songs";
+                // ACHTUNG: Der AJAX-Aufruf funktioniert nur, wenn die Seite von einem Webserver geladen wird.
+                let prefix = "/Songs";
                 let response = await fetch(`${prefix}/playlist.json`);
                 let playlist = await response.json();
                 let player = new Player(playlist, prefix);
