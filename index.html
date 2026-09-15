@@ -19,7 +19,7 @@
         <script>
             window.addEventListener("load", async () => {
                 // ACHTUNG: Der AJAX-Aufruf funktioniert nur, wenn die Seite von einem Webserver geladen wird.
-                let prefix = "/Songs";
+                let prefix = "./Songs";
                 let response = await fetch(`${prefix}/playlist.json`);
                 let playlist = await response.json();
                 let player = new Player(playlist, prefix);
